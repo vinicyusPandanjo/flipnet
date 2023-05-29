@@ -50,6 +50,10 @@ body {
                 @include device(md) {
                     bottom: 15%;
                 }
+
+                @include device(sm) {
+                    bottom: 16%;
+                }
             }
 
             .slick-prev {
@@ -90,7 +94,7 @@ body {
 
             @include device(sm) {
                 gap: 0px;
-                min-height: 100vh !important;
+
             }
 
             width: 100%;
@@ -200,7 +204,7 @@ body {
                     gap: 10px;
 
                     @include device(sm) {
-                        margin-top: 35px
+                        margin-top: 60px
                     }
 
                     .btn-link_black {
@@ -686,7 +690,7 @@ body {
 
                 @include device(sm) {
                     .slick-next {
-                        right: 8%;
+                        right: -8%;
                     }
                 }
 
