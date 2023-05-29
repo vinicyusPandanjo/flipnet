@@ -53,8 +53,6 @@ body {
             }
 
             .slick-prev {
-
-
                 @include device(md) {
                     z-index: 3;
                     left: 5%;
