@@ -48,17 +48,21 @@ body {
                 bottom: 7%;
 
                 @include device(md) {
+
                     bottom: 15%;
                 }
 
                 @include device(sm) {
-                    bottom: 16%;
+
+                    bottom: 18%;
+                }
+
+                @media screen and (max-width: 320px) {
+                    bottom: 20%;
                 }
             }
 
             .slick-prev {
-
-
                 @include device(md) {
                     z-index: 3;
                     left: 5%;
@@ -190,7 +194,7 @@ body {
 
                 @include device(sm) {
                     width: 100%;
-                    height: auto;
+                    height: 265px;
                 }
 
             }
@@ -203,8 +207,18 @@ body {
                     @include flex(row, space-between, center);
                     gap: 10px;
 
+
+
                     @include device(sm) {
-                        margin-top: 60px
+                        margin-top: 170px
+                    }
+
+                    @media screen and (max-width: 390px) {
+                        margin-top: 130px
+                    }
+
+                    @media screen and (max-width: 320px) {
+                        margin-top: 80px
                     }
 
                     .btn-link_black {
