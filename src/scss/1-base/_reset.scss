@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Rubik', sans-serif;
+
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+body * {
+    font-size: 1.6rem;
+}
+
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    @media (max-width: 576px) {
+        overflow-x: hidden;
+    }
+
+}

@@ -1,0 +1,98 @@
+footer {
+    background-color: $black_color;
+    color: $white_color;
+    padding: 35px 48px;
+
+
+    @include device(sm) {
+        padding: 35px 0;
+    }
+
+
+
+    .container {
+
+        @include flex(column, space-between, flex-start);
+        gap: 35px;
+
+
+
+        >p {
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+        }
+    }
+
+
+
+    .content_footer {
+
+        width: 100%;
+        @include flex(row, space-between, center);
+
+        .container_icons {
+            @include flex(row, space-between, center);
+            gap: 19px;
+
+            @include device(sm) {
+                display: none;
+            }
+        }
+
+        >p {
+
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+        }
+
+
+        @include device(sm) {
+            @include flex(row, space-between, center);
+            gap: 30px;
+            padding: 0 23px;
+        }
+    }
+
+    .container_icons_mobile {
+        display: none;
+
+        @include device(sm) {
+
+            @include flex(row, space-between, center);
+            gap: 19px;
+        }
+    }
+
+    .logoFlipFooter {
+        display: none;
+
+        @include device(sm) {
+            display: block;
+        }
+    }
+
+    .container_footer-mobile {
+
+
+        @include device(sm) {
+
+            border-bottom: 1px solid $white_color;
+            padding-bottom: 44px;
+            padding-left: 23px;
+            padding-right: 23px;
+            @include flex(column, center, center);
+            gap: 70px;
+
+            p {
+                text-align: center;
+
+                br {
+                    display: none;
+
+                }
+            }
+        }
+    }
+}

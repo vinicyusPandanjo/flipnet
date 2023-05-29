@@ -1,0 +1,14 @@
+header {
+    padding: 18px;
+    background: rgba(255, 86, 161, 0.05);
+
+    .container {
+        @include flex(row, space-between, center);
+
+        .btn-link {
+            @include button(93px, auto, 1px solid $pink-color, $white-color, $pink-color, 5px, 1.4rem, 1.7rem);
+            gap: 10px;
+            padding: 7px 0;
+        }
+    }
+}

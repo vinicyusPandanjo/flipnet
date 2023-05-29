@@ -1,0 +1,53 @@
+.card {
+    background-color: $white-color;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+
+
+
+    padding: 35px 10px;
+
+
+    display: grid;
+    grid-template-rows: 50px 1fr;
+
+    img {
+        width: fit-content;
+        height: fit-content;
+        margin: 0 auto;
+
+    }
+
+    .info {
+
+
+        text-align: center;
+
+        h3 {
+            margin-bottom: 17px;
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 2.1rem;
+
+
+            @include device(sm) {
+                font-size: 1.8rem;
+                line-height: 2.1rem;
+            }
+
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 2.1rem;
+            color: $gray-color_light;
+
+
+            @include device(sm) {
+
+                line-height: 1.9rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,873 @@
+body {
+    main {
+        width: 100%;
+
+        .swiper-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+            --swiper-pagination-bottom: 800px;
+        }
+    }
+
+    .welcome-flipartner {
+        background: $white-color;
+        margin-top: 70px;
+
+        @include device(md) {
+            margin-top: 30px;
+        }
+
+        @include device(sm) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+
+
+        .container_slide_welcome {
+
+            width: min(100%, 1180px);
+            margin: 0 auto;
+
+            @include device(xl) {
+                width: 90vw;
+            }
+
+            @include device(md) {
+                width: 100%;
+            }
+
+            padding-bottom: 130px;
+
+            @include device(md) {
+                padding-bottom: 50px;
+            }
+
+            .slick-dots {
+                bottom: 7%;
+
+                @include device(md) {
+                    bottom: 15%;
+                }
+            }
+
+            .slick-prev {
+
+
+                @include device(md) {
+                    z-index: 3;
+                    left: 5%;
+                }
+
+                @include device(sm) {
+                    z-index: 3;
+                    left: -7%;
+                }
+            }
+
+            .slick-next {
+
+
+                @include device(md) {
+                    right: 5%;
+                }
+
+                @include device(sm) {
+
+                    right: -7%;
+                }
+            }
+        }
+
+        .container {
+            @include flex(row, space-between, center);
+
+            @include device(md) {
+                flex-direction: column;
+                gap: 50px;
+            }
+
+            @include device(sm) {
+                gap: 0px;
+                min-height: 100vh !important;
+            }
+
+            width: 100%;
+
+            .content {
+                h1 {
+                    font-weight: 400;
+                    font-size: 4.5rem;
+                    line-height: 5.3rem;
+
+                    @include device(md) {
+                        font-size: 3.0rem;
+                        line-height: 3.6rem;
+                        text-align: center;
+
+                    }
+
+                    span {
+                        font-weight: 400;
+                        font-size: 4.5rem;
+                        line-height: 5.3rem;
+                        color: $pink-color;
+
+                        @include device(md) {
+                            font-size: 3.0rem;
+                            line-height: 3.6rem;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                p {
+                    font-weight: 300;
+                    font-size: 1.8rem;
+                    line-height: 2.1rem;
+                    margin: 32px 0;
+
+                    @include device(md) {
+                        margin: 16px 0;
+
+                        text-align: center;
+                    }
+
+
+                    @include device(sm) {
+                        font-size: 1.5rem;
+                        line-height: 1.8rem;
+
+                        br {
+                            display: none;
+                        }
+                    }
+
+                }
+
+                .controls {
+
+                    @include flex(row, flex-start, center);
+                    gap: 10px;
+
+                    @include device(md) {
+                        display: none;
+                    }
+
+                    .btn-link_black {
+                        @include button(172px, 48px, 1px solid $black-color, $white-color, $black-color, 5px, 2.0rem, 2.4rem)
+                    }
+
+                    .btn-link_white {
+                        @include button(198px, 48px, 1px solid $black-color, $black-color, $white-color, 5px, 2.0rem, 2.4rem);
+
+
+                    }
+                }
+
+
+            }
+
+            .content_slide {
+                width: 423px;
+                height: 423px;
+
+
+                img {
+                    width: 100%;
+                    height: 100%;
+
+                    @include device(sm) {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                @include device(sm) {
+                    width: 100%;
+                    height: auto;
+                }
+
+            }
+
+            .controls-mobile {
+                display: none;
+
+                @include device(md) {
+                    width: min(100%, 423px);
+                    @include flex(row, space-between, center);
+                    gap: 10px;
+
+                    @include device(sm) {
+                        margin-top: 35px
+                    }
+
+                    .btn-link_black {
+                        @include button(172px, 35px, 1px solid $black-color, $white-color, $black-color, 5px, 1.2rem, 1.4rem);
+
+                        flex: 1;
+                    }
+
+                    .btn-link_white {
+                        @include button(198px, 35px, 1px solid $black-color, $black-color, $white-color, 5px, 1.2rem, 1.4rem);
+                        flex: 1;
+
+
+                    }
+                }
+
+
+            }
+        }
+
+
+    }
+
+    .be-a-flipartner {
+        background-color: #FAFAFA;
+        padding: 70px 30px 90px 30px;
+
+        .container {
+            @include flex(column, center, center);
+
+            h2 {
+                font-weight: 400;
+                font-size: 3.5rem;
+                line-height: 4.1rem;
+                text-align: center;
+
+                @include device(md) {
+                    text-align: left;
+                    width: 100%;
+                }
+
+                @include device(sm) {
+                    font-size: 3.0rem;
+                    line-height: 3.6rem;
+                }
+            }
+
+            >p {
+                font-weight: 400;
+                font-size: 2.0rem;
+                line-height: 2.4rem;
+                text-align: center;
+                color: $gray-color;
+                margin-top: 20px;
+
+                @include device(md) {
+                    text-align: left;
+                }
+
+                @include device(sm) {
+                    font-size: 1.5rem;
+                    line-height: 1.8rem;
+                }
+            }
+
+            .container_card {
+
+                margin-top: 70px;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 27px;
+
+
+
+                @media screen and (max-width: 790px) {
+                    display: block;
+                    margin: 0;
+                    width: 90vw;
+                    margin-top: 30px;
+
+                    .slick-list {
+                        margin: 0 -13.5px;
+
+                        @include device(sm) {
+                            margin: 0 -10px;
+                        }
+                    }
+
+                    .card {
+                        width: calc(100% /3);
+
+                        @include device(sm) {
+                            width: 225px;
+
+                        }
+
+                        &.slick-slide {
+                            margin: 0 13.5px;
+
+                            @include device(sm) {
+                                margin: 0 10px;
+                            }
+                        }
+
+                        .info {
+                            margin-top: 10px;
+                        }
+                    }
+
+                }
+
+                @include device(sm) {
+                    width: 95%;
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+
+    .give-first {
+        padding: 70px 30px;
+
+        .container {
+            @include flex(row, space-between, center);
+
+            @include device(md) {
+                flex-direction: column-reverse;
+                gap: 10px;
+            }
+
+            .content_info {
+                @include flex(column, flex-start, flex-start);
+
+                >h2 {
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 500;
+                    font-size: 3.5rem;
+                    line-height: 4.2rem;
+
+                    @include device(sm) {
+                        font-size: 3.0rem;
+                        line-height: 3.6rem;
+                    }
+                }
+
+                >p {
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 400;
+                    font-size: 2.0rem;
+                    line-height: 2.4rem;
+                    color: $gray-color_dark;
+                    margin: 34px 0;
+
+                    @include device(sm) {
+                        font-size: 1.5rem;
+                        line-height: 1.8rem;
+                    }
+                }
+
+                .btn-link {
+                    @include button(90px, 24px, 1px solid $black-color_light, $white-color, $black-color_light, 5px, 1.2rem, 1.5rem);
+                    font-family: 'Inter', sans-serif;
+
+                    @include device(md) {
+                        @include button(108px, 29px, 1px solid $black-color_light, $white-color, $black-color_light, 5px, 1.5rem, 1.8rem);
+                        font-family: 'Inter', sans-serif;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-video {
+        background-color: $black-color;
+        @include flex(column, center, center);
+        padding-bottom: 180px;
+
+        padding-right: 60px;
+        padding-left: 60px;
+        margin-top: 50px;
+        box-shadow: inset 0 180px $white-color;
+
+        @include device(md) {
+            padding-bottom: 100px;
+            padding-right: 10px;
+            padding-left: 10px;
+            box-shadow: inset 0 80px $white-color;
+        }
+
+
+
+        iframe {
+            width: min(100%, 816px);
+            max-height: 460px;
+
+            @include device(md) {
+                width: 425px;
+                height: 198px;
+            }
+
+            @include device(sm) {
+                width: 100%;
+                height: 198px;
+            }
+        }
+    }
+
+    .comunity {
+        padding: 110px 30px;
+
+        @include device(md) {
+            padding: 85px 30px;
+        }
+
+        .container_comunity {
+            background: #FAFAFA;
+            border: 0.5px solid rgba(0, 0, 0, 0.15);
+            border-radius: 15px;
+            width: min(100%, 1160px);
+            margin: 0 auto;
+            gap: 60px;
+            @include flex(row, space-between, center);
+
+            padding: 30px 50px;
+
+            @include device(md) {
+                flex-direction: column;
+                gap: 30px;
+                padding: 30px;
+            }
+
+            .title_mobile_comunity {
+                h4 {
+                    display: none;
+
+                    @include device(md) {
+                        display: block;
+                        font-weight: 500;
+                        font-size: 1.5rem;
+                        line-height: 1.8rem;
+
+                        color: #000000;
+                    }
+                }
+
+                @include device(md) {
+                    @include flex(row, space-between, center);
+                    gap: 24px;
+
+                    img {
+                        width: 56px;
+                        height: 56px;
+                    }
+                }
+
+
+            }
+
+            .content {
+
+                flex: 1;
+
+                >h4 {
+                    font-weight: 500;
+                    font-size: 3.0rem;
+                    line-height: 3.6rem;
+
+                    @include device(md) {
+                        display: none;
+                    }
+                }
+
+                >p {
+                    font-weight: 400;
+                    font-size: 2.0rem;
+                    line-height: 2.4rem;
+                    margin-top: 15px;
+
+                    @include device(md) {
+                        margin: 0;
+                    }
+
+                    @include device(sm) {
+                        font-size: 1.3rem;
+                        line-height: 1.5rem;
+                    }
+                }
+            }
+
+            .btn-link {
+                @include button(152px, 45px, 5px solid $pink-color, $white-color, $pink-color, 20px, 2rem, 2.4rem);
+
+                @include device(sm) {
+                    @include button(100%, 30px, 5px solid $pink-color, $white-color, $pink-color, 20px, 1.5rem, 1.8rem);
+                }
+            }
+        }
+    }
+
+    .Flipartners-Experience {
+        background-color: #FAFAFA;
+        padding: 110px 10px 80px 10px;
+        text-align: center;
+
+        @include device(md) {
+            padding: 85px 10px 80px 10px;
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 3.5rem;
+            line-height: 4.1rem;
+            text-align: center;
+            margin-bottom: 80px;
+
+            @include device(md) {
+                margin-bottom: 50px;
+            }
+
+            @include device(sm) {
+                font-size: 3.0rem;
+                line-height: 3.6rem;
+                text-align: left;
+            }
+        }
+
+        .container-card-experience {
+            display: flex;
+            text-align: left;
+            gap: 70px;
+
+            @include device(xl) {
+
+                width: 90vw;
+
+            }
+
+            .slick-list {
+                margin: 0 -35px;
+
+                @include device(xl) {
+                    margin: 0 -17.5px;
+                }
+
+            }
+
+            .col {
+
+                width: calc(100% / 3);
+
+
+
+                @include device(md) {
+                    width: calc(100% / 4);
+                }
+
+
+                &.slick-slide {
+                    margin: 0 35px;
+
+                    @include device(xl) {
+                        margin: 0 17.5px;
+                    }
+                }
+
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 18px;
+                }
+
+                .info {
+                    flex: 1 1 auto;
+
+                    h3 {
+                        font-weight: 400;
+                        font-size: 2.8rem;
+                        line-height: 3.3rem;
+
+                        @include device(sm) {
+                            font-size: 2.5rem;
+                            line-height: 3rem;
+                        }
+
+                    }
+
+                    p {
+                        font-weight: 400;
+                        font-size: 1.4rem;
+                        line-height: 1.7rem;
+                        margin-top: 19px;
+
+                        @include device(sm) {
+                            font-size: 1.5rem;
+                            line-height: 1.3em;
+                        }
+                    }
+                }
+
+                .btn-link {
+                    @include button(154px, 33px, 1px solid $pink-color, $white-color, $pink-color, 5px, 1.6rem, 1.9rem);
+                    margin-top: 19px;
+
+
+                }
+            }
+        }
+    }
+
+    .mission-active {
+        padding: 80px 40px 110px 40px;
+
+        @include device(md) {
+            padding: 70px 40px 80px 40px;
+        }
+
+        .container {
+            display: flex;
+            gap: 40px;
+            justify-content: space-between;
+
+            @include device(md) {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .container-mission {
+
+
+                .content {
+                    @include device(md) {
+                        margin-bottom: 40px;
+                    }
+
+                    >h4 {
+                        font-family: "Inter", sans-serif;
+                        font-weight: 500;
+                        font-size: 3.5rem;
+                        line-height: 4.2rem;
+                        margin-bottom: 33px;
+
+                        @include device(sm) {
+                            font-size: 3.0rem;
+                            line-height: 3.6rem;
+                        }
+                    }
+
+                    >p {
+                        color: $gray-color_dark;
+                        font-family: "Inter", sans-serif;
+                        font-weight: 400;
+                        font-size: 2.0rem;
+                        line-height: 2.4rem;
+                        margin-bottom: 32px;
+
+                        @include device(sm) {
+                            font-size: 1.5rem;
+                            line-height: 1.8rem;
+                        }
+                    }
+
+                    >.btn-link {
+                        @include button(90px, 24px, 1px solid $black-color_light, $white-color, $black-color_light, 5px, 1.2rem, 1.5rem);
+
+                        font-weight: 400;
+                        font-family: "Inter", sans-serif;
+
+                        @include device(sm) {
+                            @include button(105px, 28px, 1px solid $black-color_light, $white-color, $black-color_light, 5px, 1.5rem, 1.8rem);
+                        }
+                    }
+                }
+            }
+
+            .slide-mission {
+                width: 837px;
+                display: flex;
+                gap: 30px;
+
+
+                @include device(sm) {
+                    .slick-next {
+                        right: 8%;
+                    }
+                }
+
+                @include device(xl) {
+                    width: 500px;
+                }
+
+                @include device(md) {
+                    width: 100%;
+                }
+
+                .slick-list {
+                    margin: 0 -14px;
+                }
+
+                .item-mission {
+
+                    width: calc(100% / 2);
+
+                    @include device(xl) {
+                        width: 100%;
+                    }
+
+                    &.slick-slide {
+                        margin: 0 14px;
+                    }
+
+                    border: 1px solid #E5E5E5;
+                    padding: 25px 35px;
+                    border-radius: 8px;
+                    background-color: $white-color;
+
+                    @include device(xl) {
+                        padding: 10px;
+                    }
+
+                    .item-header {
+
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+
+                        span {
+                            strong {
+
+                                font-family: "Inter", sans-serif;
+                                font-weight: 500;
+
+                                font-size: 1.6rem;
+                                line-height: 1.9rem;
+                                text-transform: uppercase;
+
+
+                            }
+
+                            p {
+                                font-family: "Inter", sans-serif;
+                                font-weight: 400;
+                                font-size: 1.0rem;
+                                line-height: 1.2rem;
+                                margin-top: 8px;
+                            }
+                        }
+                    }
+
+                    .item-body {
+                        margin: 35px 0;
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    .item-footer {
+
+                        @include flex(row, space-between, center);
+
+
+                        @include device(xl) {
+                            flex-wrap: wrap;
+                            gap: 10px;
+                        }
+
+                        @include device(sm) {
+                            flex-wrap: nowrap;
+                            gap: 40px
+                        }
+
+                        @media screen and (max-width: 360px) {
+                            gap: 10px;
+                        }
+
+                        @media screen and (max-width: 320px) {
+                            flex-direction: column;
+                            gap: 8px;
+                        }
+
+
+                        .box-data {
+                            @include flex(row, flex-start, center);
+                            gap: 8px;
+                            background: $white-color_dark;
+                            border-radius: 6px;
+                            min-width: 183px;
+                            min-height: 35px;
+                            padding: 6px 20px 6px 10px;
+
+                            @include device(xl) {
+                                padding: 0;
+                                width: 100%;
+                                padding-left: 7px;
+                                min-width: auto;
+                            }
+
+                            img {
+                                width: 19px;
+                                height: 22px;
+
+                                @include device(xl) {
+                                    width: 15px;
+                                    height: 18px;
+                                }
+                            }
+
+                            p {
+                                color: $black-color_light;
+                                font-family: "Inter", sans-serif;
+                                font-weight: 400;
+                                font-size: 1.4rem;
+                                line-height: 1.7rem;
+
+                                @include device(sm) {
+                                    font-size: 1.2rem;
+                                    line-height: 1.5rem;
+                                }
+                            }
+                        }
+
+                        .btn-link {
+                            @include button(105px, 35px, 1px solid $black-color_light, $white-color, $black-color_light, 6px, 1.4rem, 1.7rem);
+
+                            font-weight: 400;
+                            font-family: "Inter", sans-serif;
+
+                            @include device(sm) {
+                                @include button(55%, 30px, 1px solid $black-color_light, $white-color, $black-color_light, 5px, 1.2rem, 1.5rem);
+                            }
+
+                            @media screen and (max-width: 320px) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .faqSection {
+
+        padding: 75px 30px;
+
+        @include device(sm) {
+            padding-top: 0;
+        }
+
+        h4 {
+            font-weight: 400;
+            font-size: 3.5rem;
+            line-height: 4.1rem;
+
+            margin-bottom: 30px;
+
+
+            @include device(sm) {
+                font-size: 3.0rem;
+                line-height: 3.6rem;
+            }
+        }
+    }
+
+}
