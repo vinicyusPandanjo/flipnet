@@ -91,6 +91,9 @@ body {
         .container {
             @include flex(row, space-between, center);
 
+
+            gap: 16px;
+
             @include device(md) {
                 flex-direction: column;
                 gap: 50px;
@@ -104,6 +107,7 @@ body {
             width: 100%;
 
             .content {
+
                 h1 {
                     font-weight: 400;
                     font-size: 4.5rem;
@@ -287,10 +291,44 @@ body {
             .container_card {
 
                 margin-top: 70px;
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                gap: 27px;
+                width: 100%;
 
+                .slick-dots {
+                    bottom: -25%;
+                    gap: 8px;
+                }
+
+                .slick-list {
+                    margin: 0 -13.5px;
+
+                    @media screen and (max-width: 790px) {
+
+                        height: 250px;
+                    }
+
+                    @include device(sm) {
+                        margin: 0 -10px;
+
+                        height: auto;
+                    }
+                }
+
+                .card.slick-slide {
+                    margin: 0 13.5px;
+
+                    @include device(sm) {
+                        margin: 0 10px;
+                    }
+                }
+
+                .info {
+                    margin-top: 18px;
+
+                    @media screen and (max-width: 790px) {
+                        margin-top: 10px;
+                    }
+
+                }
 
 
                 @media screen and (max-width: 790px) {
@@ -299,32 +337,13 @@ body {
                     width: 90vw;
                     margin-top: 30px;
 
-                    .slick-list {
-                        margin: 0 -13.5px;
 
-                        @include device(sm) {
-                            margin: 0 -10px;
-                        }
-                    }
 
                     .card {
                         width: calc(100% /3);
 
                         @include device(sm) {
                             width: 225px;
-
-                        }
-
-                        &.slick-slide {
-                            margin: 0 13.5px;
-
-                            @include device(sm) {
-                                margin: 0 10px;
-                            }
-                        }
-
-                        .info {
-                            margin-top: 10px;
                         }
                     }
 

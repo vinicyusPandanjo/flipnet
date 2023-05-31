@@ -26,15 +26,8 @@ const Methods = {
       ],
     });
 
-    if (window.innerWidth > 576) {
-      $(window).on("load", function () {
-        let stHeight = $(".container_slide_welcome .slick-track").height();
-        $(".container_slide_welcome .slick-slide").css(
-          "height",
-          stHeight + "px"
-        );
-      });
-    }
+    let stHeight = $(".container_slide_welcome .slick-track").height();
+    $(".container_slide_welcome .slick-slide").css("height", stHeight + "px");
   },
 
   slideExperiencia() {
@@ -97,37 +90,52 @@ const Methods = {
   },
 
   slideCard() {
-    if (window.innerWidth <= 576) {
-      $(".container_card").slick({
-        dots: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        centerMode: true,
-        variableWidth: true,
-        adaptiveHeight: true,
-        arrow: false,
-        prevArrow: false,
-        nextArrow: false,
-      });
-      let stHeight = $(".container_card .slick-track").height();
-      $(".container_card .slick-slide").css("height", stHeight + "px");
-      return;
-    }
-    if (window.innerWidth <= 790) {
-      $(".container_card").slick({
-        dots: false,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        prevArrow: false,
-        nextArrow: false,
-      });
+    $(".container_card").slick({
+      dots: $(".container_card .card").length > 5 ? true : false,
+      infinite: true,
+      slidesToShow: 5,
+      prevArrow:
+        "<button class=' prev slick-prev'><img src='src/image/arrow_left.svg'></button>",
 
-      let stHeight = $(".container_card .slick-track").height();
-      $(".container_card .slick-slide").css("height", stHeight + "px");
-    }
+      nextArrow:
+        "<button class=' next slick-next'><img src='src/image/arrow_right.svg'></button>",
+
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 4,
+          },
+        },
+        {
+          breakpoint: 790,
+          settings: {
+            dots: false,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: false,
+            nextArrow: false,
+          },
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+
+            variableWidth: true,
+          },
+        },
+      ],
+    });
+
+    let stHeight = $(".container_card .slick-track").height();
+    $(".container_card .slick-slide").css("height", stHeight + "px");
   },
 };
 
